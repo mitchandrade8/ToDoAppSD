@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showCreate = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        
+        NavigationStack {
+            Text("What it do baby")
+                .toolbar {
+                    ToolbarItem {
+                        Button(action: {
+                            showCreate.toggle()
+                        }, label: {
+                            Label("Add Item", systemImage: "plus")
+                        })
+                    }
+                }
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

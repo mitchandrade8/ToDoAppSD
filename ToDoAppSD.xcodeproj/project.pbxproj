@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7443A7232A38D14B0021E44F /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443A7222A38D14B0021E44F /* CreateView.swift */; };
 		7471F2052A38A5E8004B8D56 /* ToDoAppSDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471F2042A38A5E8004B8D56 /* ToDoAppSDApp.swift */; };
 		7471F2072A38A5E8004B8D56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7471F2062A38A5E8004B8D56 /* ContentView.swift */; };
 		7471F2092A38A5EA004B8D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7471F2082A38A5EA004B8D56 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7443A7222A38D14B0021E44F /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		7471F2012A38A5E8004B8D56 /* ToDoAppSD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoAppSD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7471F2042A38A5E8004B8D56 /* ToDoAppSDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoAppSDApp.swift; sourceTree = "<group>"; };
 		7471F2062A38A5E8004B8D56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				7471F2042A38A5E8004B8D56 /* ToDoAppSDApp.swift */,
 				7471F2062A38A5E8004B8D56 /* ContentView.swift */,
 				7471F2122A38A632004B8D56 /* ToDoItem.swift */,
+				7443A7222A38D14B0021E44F /* CreateView.swift */,
 				7471F2082A38A5EA004B8D56 /* Assets.xcassets */,
 				7471F20A2A38A5EA004B8D56 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				7471F2072A38A5E8004B8D56 /* ContentView.swift in Sources */,
 				7471F2052A38A5E8004B8D56 /* ToDoAppSDApp.swift in Sources */,
+				7443A7232A38D14B0021E44F /* CreateView.swift in Sources */,
 				7471F2132A38A632004B8D56 /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +283,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +313,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

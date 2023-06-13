@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 
+@Model
 final class ToDoItem {
     var title: String
     var timestamp: Date
