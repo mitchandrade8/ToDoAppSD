@@ -10,6 +10,8 @@ import SwiftData
 
 struct ContentView: View {
     
+    @Environment(\.modelContext) var context
+    
     @State private var showCreate = false
     @Query private var items: [ToDoItem]
     
@@ -40,7 +42,9 @@ struct ContentView: View {
                         Spacer()
                         
                         Button {
-                            
+                            withAnimation {
+                                item.isCompleted.toggle()
+                            }
                         } label: {
                             Image(systemName: "checkmark")
                                 .symbolVariant(.circle.fill)
@@ -48,6 +52,19 @@ struct ContentView: View {
                                 .font(.largeTitle)
                         }
                         .buttonStyle(.plain)
+                    }
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            
+                            withAnimation {
+                                context.delete(item)
+                            }
+                            
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                                .symbolVariant(.fill)
+                        }
+
                     }
                 }
             }
