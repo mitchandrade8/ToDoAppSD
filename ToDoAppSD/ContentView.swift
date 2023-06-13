@@ -13,7 +13,11 @@ struct ContentView: View {
     @Environment(\.modelContext) var context
     
     @State private var showCreate = false
-    @Query private var items: [ToDoItem]
+    @State private var toDoToEdit: ToDoItem?
+    @Query(
+        filter: #Predicate { $0.isCompleted == false },
+        sort: \.timestamp
+    ) private var items: [ToDoItem]
     
     var body: some View {
         
@@ -65,6 +69,12 @@ struct ContentView: View {
                                 .symbolVariant(.fill)
                         }
 
+                        Button {
+                            toDoToEdit = item
+                        } label: {
+                            Label("Edit", systemImage: "pencil")
+                        }
+                        .tint(.orange)
                     }
                 }
             }
@@ -84,6 +94,13 @@ struct ContentView: View {
                 }
                 .presentationDetents([.medium])
             })
+            
+            .sheet(item: $toDoToEdit) {
+                toDoToEdit = nil
+            } content: { item in
+                UpdateToDoView(item: item)
+            }
+
         }
     }
 }
