@@ -12,7 +12,7 @@ struct UpdateToDoView: View {
     
     @Environment(\.dismiss) var dismiss
     
-    @Bindable var item: ToDoItem
+    @Bindable var item: Item
     
     var body: some View {
         List {

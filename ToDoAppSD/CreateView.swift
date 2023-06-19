@@ -12,7 +12,7 @@ struct CreateToDoView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) var context
     
-    @State private var item = ToDoItem()
+    @State private var item = Item()
     
     var body: some View {
         List {
@@ -32,5 +32,5 @@ struct CreateToDoView: View {
 
 #Preview {
     CreateToDoView()
-        .modelContainer(for: ToDoItem.self)
+        .modelContainer(for: Item.self)
 }

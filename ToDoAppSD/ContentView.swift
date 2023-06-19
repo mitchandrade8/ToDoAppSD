@@ -13,11 +13,11 @@ struct ContentView: View {
     @Environment(\.modelContext) var context
     
     @State private var showCreate = false
-    @State private var toDoToEdit: ToDoItem?
+    @State private var toDoToEdit: Item?
     @Query(
         filter: #Predicate { $0.isCompleted == false },
         sort: \.timestamp
-    ) private var items: [ToDoItem]
+    ) private var items: [Item]
     
     var body: some View {
         

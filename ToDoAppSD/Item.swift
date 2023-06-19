@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class ToDoItem {
+final class Item {
     var title: String
     var timestamp: Date
     var isCritical: Bool
@@ -25,3 +25,4 @@ final class ToDoItem {
         self.isCompleted = isCompleted
     }
 }
+
